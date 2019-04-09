@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="Galaxy-MSM8916"
+           fetch="https://github.com"
+           review="review.msm8916.com"
+           revision="lineage-15.1" />
+
+ <!-- Samsung MSM8916 Common Repos -->
+  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" groups="device" remote="github" revision="lineage-15.1"/>
+
+ <!-- Samsung Hardware Repo -->
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" />
+
+ <!-- Qcom audio  -->
+  <remove-project name="LineageOS/android_hardware_qcom_audio"/>
+  <project path="hardware/qcom/audio-caf/msm8916" name="Galaxy-MSM8916/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-15.1-caf-8916" />
+
+ <!-- Qcom Common -->
+  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
+
+ <!-- Dependencies -->
+  <project path="external/busybox" name="omnirom/android_external_busybox" remote="github" revision="android-8.1"/>
+  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="lineage-15.1"/>
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings"/>
+
+ <!-- HIDL replace -->
+  <remove-project name="LineageOS/android_system_tools_hidl"/>
+  <remove-project name="platform/system/libhwbinder"/>
+  <remove-project name="platform/system/hwservicemanager"/>
+  <project path="system/tools/hidl" name="LineageOS/android_system_tools_hidl" remote="github" revision="lineage-15.1"/>
+  <project path="system/libhwbinder" name="AlexAnanas/android_system_libhwbinder" remote="github" revision="master"/>
+  <project path="system/hwservicemanager" name="LineageOS/android_system_hwservicemanager" remote="github" revision="lineage-15.1"/>
+
+ <!-- arm-eabi-7.2 -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" remote="github" revision="master"/>
+
+ <!-- Galaxy A5 (2015) -->
+  <project path="kernel/samsung/msm8916" name="Deadsquirrel01/android_kernel_samsung_msm8916" remote="github" revision="lineage-15.1"/>
+  <project path="vendor/samsung" name="Srkndenis/proprietary_vendor_samsung" remote="github" revision="lineage-15.1"/>
+  <project path="device/samsung/msm8916-common" name="Srkndenis/android_device_samsung_msm8916-common" remote="github" revision="lineage-15.1"/>
+  <project path="device/samsung/a5-common" name="Srkndenis/android_device_samsung_a5-common" remote="github" revision="lineage-15.1"/>
+  <project path="device/samsung/a5ltexx" name="Srkndenis/android_device_samsung_a5ltexx" remote="github" revision="lineage-15.1"/>
+
+</manifest>
